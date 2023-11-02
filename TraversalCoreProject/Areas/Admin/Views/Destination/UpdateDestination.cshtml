@@ -1,0 +1,59 @@
+﻿@model Destination
+@{
+    ViewData["Title"] = "UpdateDestination";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Update Destination</h1>
+
+<form method="post">
+   <input type="hidden" asp-for="DestinationID" class="form-control" />
+    <div class="form-group">
+        @Html.Label("City")
+        <input type="text" asp-for="City" class="form-control" />
+        <br />
+    </div>
+    <div class="form-group">
+        @Html.Label("DayNight")
+        <input type="text" asp-for="DayNight" class="form-control" />
+        <br />
+    </div>
+    <div class="form-group">
+        @Html.Label("Price")
+        <input type="text" asp-for="Price" class="form-control" />
+        <br />
+    </div>
+    <div class="form-group">
+        @Html.Label("Image")
+        <input type="text" asp-for="Image" class="form-control" />
+        <br />
+    </div>
+    <div class="form-group">
+        @Html.Label("Capacity")
+        <input type="text" asp-for="Capacity" class="form-control" />
+        <br />
+    </div>
+    <div class="form-group">
+        @Html.Label("Cover Image")
+        <input type="text" asp-for="CoverImage" class="form-control" />
+        <br />
+    </div>
+    <div class="form-group">
+        @Html.Label("Image 2")
+        <input type="text" asp-for="Image2" class="form-control" />
+        <br />
+    </div>
+    <div class="form-group">
+        @Html.Label("Details 1")
+        <textarea cols="30" rows="5" class="form-control" asp-for="Details1"></textarea>
+        <br />
+    </div>
+    <div class="form-group">
+        @Html.Label("Details 2")
+        <textarea cols="30" rows="5" class="form-control" asp-for="Details2"></textarea>
+        <br />
+    </div>
+    <br />
+    <button class="btn btn-outline-primary">Update Destination</button>
+</form>
+

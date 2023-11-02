@@ -1,0 +1,14 @@
+﻿@model UpdateRoleViewModel
+@{
+    ViewData["Title"] = "UpdateRole";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Update Role</h1>
+<form method="post">
+    <input type="hidden" asp-for="RoleId" class="form-control" />
+    <label>Role name</label>
+    <input type="text" asp-for="RoleName" class="form-control"/>
+    <br />
+    <button class="btn btn-outline-success">Update Role</button>
+</form>

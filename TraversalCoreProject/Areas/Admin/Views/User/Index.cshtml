@@ -1,0 +1,36 @@
+﻿@model List<AppUser>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+<h1>User List</h1>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Name Surname</th>
+        <th>Username</th>
+        <th>Mail</th>
+        <th>Update</th>
+        <th>Delete</th>
+        <th>Comments</th>
+        <th>Tour History</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            @{count = count+1;}
+            <td>@count</td>
+            <td>@item.Name @item.Surname</td>
+            <td>@item.UserName</td>
+            <td>@item.Email</td>
+            <td><a href="/Admin/User/DeleteUser/@item.Id" class="btn btn-outline-danger">Delete</a></td>
+            <td><a href="/Admin/User/EditUser/@item.Id" class="btn btn-outline-success">Update</a></td>
+            <td><a href="/Admin/User/CommentUser/@item.Id" class="btn btn-outline-info">Comments</a></td>
+            <td><a href="/Admin/User/ReservationUser/@item.Id" class="btn btn-outline-secondary">Tour History</a></td>
+        </tr>
+    }
+</table>
+<a href="/Login/SignUp/" class="btn btn-outline-primary">New User</a>
